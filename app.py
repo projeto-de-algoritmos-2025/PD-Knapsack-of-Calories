@@ -49,3 +49,21 @@ selected_food_names = st.multiselect(
     options=available_foods,
     default=available_foods[:7] # ja deixa pré-selecionado os 7 primeiros
 )
+
+st.info("A otimização considerará apenas os alimentos selecionados acima.")
+
+# logica acontece no click no botao
+if st.button('💪 Otimizar meu Cardápio!', use_container_width=True):
+    if not selected_food_names:
+        st.warning("Por favor, selecione pelo menos um alimento para otimizar.")
+    else:
+        # Prepara os dados para o algoritmo no formato esperado
+        items_for_solver = []
+        for name in selected_food_names:
+            items_for_solver.append({
+                'name': name,
+                'weight': FOOD_DATABASE[name]['weight'],
+                'value': FOOD_DATABASE[name]['value']
+            })
+
+
