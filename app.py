@@ -1,6 +1,7 @@
 import streamlit as st
+from knapsack_solver import solve_knapsack
 
-# --- BASE DE DADOS DE ALIMENTOS ---
+# BASE DE DADOS DE ALIMENTOS
 # simulando um banco de dados, pois não seria necessário tê-lo agora
 # As equivalencias: 'weight' = Calorias, 'value' = Proteínas (em gramas)
 
@@ -66,4 +67,29 @@ if st.button('💪 Otimizar meu Cardápio!', use_container_width=True):
                 'value': FOOD_DATABASE[name]['value']
             })
 
+        # Chama o algoritmo aqui
+        max_protein, selected_foods = solve_knapsack(items_for_solver, calorie_limit)
 
+        st.header("🎉 Resultado da Otimização")
+
+        if not selected_foods:
+            st.error("Nenhum cardápio pôde ser formado com as opções e o limite de calorias informado.")
+        else:
+            # Calcula o total de calorias do cardapio otimizado
+            total_calories = sum(food['weight'] for food in selected_foods)
+
+            col1, col2 = st.columns(2)
+            col1.metric("Proteína Total", f"{max_protein:.1f} g")
+            col2.metric("Calorias Totais", f"{total_calories} kcal")
+            
+            st.subheader("Cardápio Sugerido:")
+            for food in selected_foods:
+                st.markdown(
+                    f"- **{food['name']}**: {food['weight']} kcal, **{food['value']}g de proteína**"
+                )
+            
+            st.success("Este é o cardápio que oferece o máximo de proteína dentro do seu limite de calorias!")
+
+#  exibe a base de dados para comparar
+with st.expander("Ver a base de dados de alimentos completa"):
+    st.dataframe(FOOD_DATABASE)
