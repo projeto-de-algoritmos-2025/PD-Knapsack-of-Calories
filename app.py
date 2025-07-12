@@ -30,3 +30,22 @@ st.write(
     "para montar um cardápio que **maximiza a quantidade de proteína** "
     "sem ultrapassar seu limite de calorias diário."
 )
+
+st.header("1. Configure seus Parâmetros")
+
+calorie_limit = st.number_input(
+    'Qual seu limite máximo de calorias (kcal)?',
+    min_value=100,
+    max_value=4000,
+    value=800,
+    step=50
+)
+
+# selecionando os alimentos a considerar
+st.write("Quais alimentos você quer incluir na otimização?")
+available_foods = list(FOOD_DATABASE.keys())
+selected_food_names = st.multiselect(
+    'Escolha os alimentos:',
+    options=available_foods,
+    default=available_foods[:7] # ja deixa pré-selecionado os 7 primeiros
+)
