@@ -25,7 +25,7 @@ Este projeto tem como objetivo apresentar a aplicação do algoritmo Knapsack em
 
 ## Gravação
 
-[Gravação do Algoritmo KnapSack](https://unbbr-my.sharepoint.com/:v:/r/personal/221007706_aluno_unb_br/Documents/Grava%C3%A7%C3%B5es/ALgoritmo%20Knapsack-20250712_172225-Grava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o.mp4?csf=1&web=1&e=KG17n9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Gravação do Algoritmo KnapSack](https://youtu.be/YUdAiS02YBM)
 
 
 ## Instalação 
