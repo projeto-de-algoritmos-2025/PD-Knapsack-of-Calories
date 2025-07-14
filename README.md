@@ -11,18 +11,21 @@
 
 ## Sobre 
 
-Este projeto tem como objetivo apresentar
+Este projeto tem como objetivo apresentar a aplicação do algoritmo Knapsack em um contexto de cálculo de dieta, onde o objetivo é maximizar a quantidade de proteína ingerida diariamente, mas sem exceder um limite máximo de calorias definido pelo usuário.
 
 ## Screenshots
 
 #### Tela Inicial da aplicação
 
-![Tela Inicial](/assets/tela_inicial.png)
+![Tela Inicial](/imgs/img-inicial.png)
 
+#### Dieta Calculada
+
+![Dieta Calculad](/imgs/img-dieta-calculada.png)
 
 ## Gravação
 
-[Gravação Contagem de Inversões](https://youtu.be/link)
+[Gravação do Algoritmo KnapSack](https://unbbr-my.sharepoint.com/:v:/r/personal/221007706_aluno_unb_br/Documents/Grava%C3%A7%C3%B5es/ALgoritmo%20Knapsack-20250712_172225-Grava%C3%A7%C3%A3o%20de%20Reuni%C3%A3o.mp4?csf=1&web=1&e=KG17n9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 
 ## Instalação 
@@ -76,9 +79,6 @@ pip install -r requirements.txt
 Com as dependências baixadas, vamos executar a aplicação localmente, com o comando:
 
 ```bash
-streamlit run main.py
+streamlit run app.py
 
 ```
-
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
